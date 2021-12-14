@@ -1,0 +1,214 @@
+//Обнуляющий стиль
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+/*---------------------------------------------------*/
+
+.body {
+	@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+	font-family: "Play", sans-serif;
+	background: url(../img/background.jpg) no-repeat fixed;
+	background-size: cover;
+	overflow-x: hidden;
+	height: 70vh;
+}
+.container {
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	padding-bottom: 40px;
+}
+.gallery {
+	background: linear-gradient(98.43deg, rgba(25, 23, 124, 0.2) -4.39%, rgba(88, 102, 233, 0.2) 105.9%);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border: 2px solid rgba(87, 40, 214, 0.41);
+	width: 70%;
+	min-width: 550px;
+	margin: 0 auto;
+	margin-top: 50px;
+	color: rgb(255, 255, 255);
+	& input {
+		display: none;
+	}
+	&__upload {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 60px auto auto auto;
+		border-radius: 20px;
+	}
+	&__body {
+		display: flex;
+		padding: 10px 50px 50px 50px;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+	&__item {
+		display: flex;
+		flex-grow: 1;
+		margin: 0px;
+		padding: 0px;
+		height: 200px;
+		object-fit: cover;
+		cursor: pointer;
+		opacity: 1;
+		transition: 0.3s;
+		border-radius: 7px;
+	}
+	&__itemsCount {
+		font-size: 20px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 20px;
+	}
+	&__itemContainer {
+		display: flex;
+		flex-grow: 1;
+		margin: 3px;
+		padding: 0px;
+		transition: 0.3s;
+		position: relative;
+		object-fit: cover;
+	}
+	&__itemDelete {
+		font-size: 24px;
+		z-index: 10;
+		text-shadow: 2px 2px 5px #000;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		cursor: pointer;
+		text-align: center;
+	}
+}
+.btn-open,
+.btn-upload {
+	margin: 0px 50px;
+	background: linear-gradient(98.43deg, rgba(25, 23, 124, 0.2) -4.39%, rgba(88, 102, 233, 0.2) 105.9%);
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(87, 40, 214, 0.41);
+	padding: 5px 15px;
+	border-radius: 15px;
+	font-size: 18px;
+	position: relative;
+	transition: 0.2s;
+	color: rgb(255, 255, 255);
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 0 rgb(174, 0, 255);
+		transition: 0.2s;
+	}
+	&:active {
+		transform: translateY(-2px);
+		box-shadow: 0 0px 0 rgb(174, 0, 255);
+		transition: 0.1s;
+	}
+}
+.popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	z-index: 11;
+	&__wraper {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: flex;
+		z-index: 1;
+	}
+	&__content {
+		width: 90vw;
+		height: 90vh;
+		background-color: rgba(255, 255, 255, 0);
+		margin: auto;
+		justify-content: center;
+		padding: 0px;
+		z-index: 2;
+		position: relative;
+	}
+	&__img {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 100%;
+		max-height: 100%;
+		border-radius: 10px;
+	}
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="body">
+	<div class="container">
+		<div class="gallery">
+			<div class="gallery__upload">
+				<input type="file" id="file" multiple accept="image/*">
+				<button class="btn-open" onclick="op_click()">Открыть</button>
+				<button class="btn-upload" onclick="up_click()">Загрузить</button>
+			</div>
+			<div class=" gallery__body" id="div">
+			</div>
+		</div>
+	</div>
+	<div class="popup">
+		<div class="popup__wraper">
+			<div class="popup__content">
+				<img class="popup__img" />
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
