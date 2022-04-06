@@ -1,2 +1,2 @@
 # Gallery
-![](./Gallery.png)
+![](./gallery.png)
